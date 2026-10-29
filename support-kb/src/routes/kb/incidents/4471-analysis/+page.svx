@@ -1,0 +1,34 @@
+---
+layout: runbook
+title: '#4471 · date reports by cause'
+owner: support desk
+status: investigation
+reviewed: 2026-10-29
+signature: Codex
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+
+  const signature = 'Codex';
+</script>
+
+# What the reports show
+
+Ticket #4471 combines reports that the current knowledge base classifies as two different problems. The shared parser reads dates month-first for day-first tenants. Booking v3 also shows a month-first hint even though its form reads dates in the tenant's format. These need separate engineering tickets.
+
+The table uses unique report IDs, tenant locales, form versions and channels. Intake tags are guesses based on the browser and do not determine the cause. Its counts are recomputed from the export when the page renders.
+
+<CauseTable ticket={4471} />
+
+Five reports in the desk notes describe a possible one-day move. The current classifier counts them under the parser based on tenant and channel; investigate their details before concluding they share that defect. The export is a snapshot, so check the live desk before treating its counts as current.
+
+## When reports arrived and were merged
+
+<QueueTimeline ticket={4471} />
+
+The desk's accepted subject-only deduplication rule can merge different causes and split reports of the same cause. Use tenant, channel and report details when triaging; do not amend the accepted decision record. Record any replacement decision separately.
+
+<RenderStamp {signature} />
