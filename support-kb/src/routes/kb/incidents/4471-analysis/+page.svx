@@ -4,7 +4,7 @@ title: '#4471 · date reports by cause'
 owner: support desk
 status: resolved
 reviewed: 2026-10-29
-signature: Codex
+signature: v1.eyJzdWIiOiIzNDczIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMzMTQzNTcsImV4cCI6MTc5MzQwMDc1N30.nMeukeblQ1fKvFQxrL_sqSNKs3ZJI_7hQe1Kl2pBFMk
 ---
 
 <script>
@@ -12,7 +12,7 @@ signature: Codex
   import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
 
-  const signature = 'Codex';
+  const signature = 'v1.eyJzdWIiOiIzNDczIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMzMTQzNTcsImV4cCI6MTc5MzQwMDc1N30.nMeukeblQ1fKvFQxrL_sqSNKs3ZJI_7hQe1Kl2pBFMk';
 </script>
 
 # What the reports show
