@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 · date reports by cause'
 owner: support desk
-status: investigation
+status: resolved
 reviewed: 2026-10-29
 signature: Codex
 ---
@@ -17,7 +17,11 @@ signature: Codex
 
 # What the reports show
 
-Ticket #4471 combines reports that the current knowledge base classifies as two different problems. The shared parser reads dates month-first for day-first tenants. Booking v3 also shows a month-first hint even though its form reads dates in the tenant's format. These need separate engineering tickets.
+Ticket #4471 combines reports that the knowledge base classifies as two different problems. The shared parser read dates month-first for day-first tenants. Booking v3 also showed a month-first hint even though its form read dates in the tenant's format.
+
+## Engineering update
+
+The desk closed #4471 on 5 October. The parser was fixed in `fix(dates): parse dd/mm for eu locales`. The hint will not be fixed because booking v3 was retired. The two issues have different outcomes: completed for the parser, not planned for the hint.
 
 The table uses unique report IDs, tenant locales, form versions and channels. Intake tags are guesses based on the browser and do not determine the cause. Its counts are recomputed from the export when the page renders.
 
